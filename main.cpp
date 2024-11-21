@@ -41,7 +41,6 @@ AsNat r(const AsNat& n, const AsNat& init_value,
 
 
 AsNat pred(const AsNat& x) {
-    // Рекурсивное вычисление через подстановку
     return r(x, x, z, [](const AsNat& a, const AsNat&) -> AsNat { return a - AsNat(1); });
 }
 
